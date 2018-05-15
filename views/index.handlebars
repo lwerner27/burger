@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col s12 m6 main-col">
+            <h3 class="center">Burgers To Eat</h3>
+            <br>
+            <br>
+
+            {{#each burgers}}
+                {{#if devoured}}
+                    <div class="row flex">
+
+                        <div class="col s6 valign-wrapper container-col center-align">
+                            <span class="burger-name">{{burger_name}}</span>
+                        </div>
+
+                        <div class="col s6 valign-wrapper container-col center">
+                            <a class="waves-effect waves-light btn dev-btn">Devour</a>
+                        </div>
+                            
+                    </div>
+                {{/if}}
+            {{/each}}
+
+        </div>
+
+        <div class="col s12 m6 main-col">
+            <h3 class="center">Burgers You Ate</h3>
+            <br>
+            <br>
+
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <div class="row">
+                        <div class="col s6 offset-s3 center">
+                            <span>{{burger_name}}</span>
+                        </div>
+                    </div>
+                {{/unless}}
+            {{/each}}
+
+        </div>
+
+    </div>
+
+    <br>
+
+</div>
+
+<br>
+<br>
+
+<div class="container">
+
+        <div class="row">
+
+        <div class="input-field col s12 m4 offset-m3">
+            <input id="burger_name" type="text">
+            <label for="burger_name">Burger Name</label>
+        </div>
+
+        <div class="col s12 m2">
+            <a class="waves-effect waves-light btn-large add-btn">Add Burger</a>
+        </div>
+
+    </div>
+    
+</div>

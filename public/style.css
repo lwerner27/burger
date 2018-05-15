@@ -1,0 +1,29 @@
+.main-col {
+    height: 100%;
+}
+
+.container-col {
+    width: 100%;
+    text-align: center;
+}
+
+.burger-name {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.dev-btn {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-btn {
+    height: 100%;
+    width: 100%;
+}
