@@ -36,7 +36,7 @@ router.put("/api/burgers/:id", (req, res) => {
 
     burger.devourBurger(id, (data) => {
         // console.log(data)
-        res.send(200)
+        res.sendStatus(200)
     })
 
 })
