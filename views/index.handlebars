@@ -7,7 +7,7 @@
             <br>
 
             {{#each burgers}}
-                {{#if devoured}}
+                {{#unless devoured}}
                     <div class="row flex">
 
                         <div class="col s6 valign-wrapper container-col center-align">
@@ -15,11 +15,11 @@
                         </div>
 
                         <div class="col s6 valign-wrapper container-col center">
-                            <a class="waves-effect waves-light btn dev-btn">Devour</a>
+                            <a class="waves-effect waves-light btn dev-btn" data-id="{{id}}">Devour</a>
                         </div>
                             
                     </div>
-                {{/if}}
+                {{/unless}}
             {{/each}}
 
         </div>
@@ -30,13 +30,13 @@
             <br>
 
             {{#each burgers}}
-                {{#unless devoured}}
+                {{#if devoured}}
                     <div class="row">
                         <div class="col s6 offset-s3 center">
                             <span>{{burger_name}}</span>
                         </div>
                     </div>
-                {{/unless}}
+                {{/if}}
             {{/each}}
 
         </div>
